@@ -1,7 +1,7 @@
 #define PADDING 500
-#define NAMESIZE 20
-#define PASSSIZE 20
-#define EMAILSIZE 20
+#define NAMESIZE 50
+#define PASSSIZE 50
+#define EMAILSIZE 50
 #define BOARDSIZE 999
 #define URLSIZE 100
 

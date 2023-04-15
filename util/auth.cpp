@@ -133,8 +133,8 @@ void LoginForm() {
                         for (int sp=0;sp<3+loginForm[i].size(); sp++) {
                             cout << " ";
                         }
-                        if (loginForm[i].size() > 20) {
-                            loginForm[i].resize(20);
+                        if (loginForm[i].size() > 50) {
+                            loginForm[i].resize(50);
                         }
                     }
                 }
@@ -212,8 +212,8 @@ void SignupForm() {
                         for (int sp=0;sp<3+signupForm[i].size(); sp++) {
                             cout << " ";
                         }
-                        if (signupForm[i].size() > 20) {
-                            signupForm[i].resize(20);
+                        if (signupForm[i].size() > 50) {
+                            signupForm[i].resize(50);
                         }
                     }
                 }

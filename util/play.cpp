@@ -1,7 +1,7 @@
 // 2D map
-// #include "level.cpp"
+#include "level.cpp"
 // Link list map
-#include "linklist/level-linklist.cpp"
+// #include "linklist/level-linklist.cpp"
 
 int levelChoice;
 void LevelMenu() {
@@ -103,8 +103,8 @@ void Play() {
         int index = 0;
         for (int i=0; i<loginPlayer.state[levelChoice].p; i++) {
             for (int j=0; j<loginPlayer.state[levelChoice].q; j++) {
-                // level.Map[i][j] = loginPlayer.state[levelChoice].board[index]; // 2D
-                ChangeMap(level.Map, j, i, loginPlayer.state[levelChoice].board[index]); // Linklist
+                level.Map[i][j] = loginPlayer.state[levelChoice].board[index]; // 2D
+                // ChangeMap(level.Map, j, i, loginPlayer.state[levelChoice].board[index]); // Linklist
                 index++;
             }
         }
@@ -145,13 +145,13 @@ void Play() {
     // Delete map
 
     // 2D
-    // for (int i=0; i<level.mapHeight; i++) {
-    //     delete [] *(level.Map+i);
-    // }
-    // delete [] level.Map;
+    for (int i=0; i<level.mapHeight; i++) {
+        delete [] *(level.Map+i);
+    }
+    delete [] level.Map;
 
     // Linklist
-    DeleteMap(level.Map);
+    // DeleteMap(level.Map);
 
     // Update player record
     if (levelChoice == loginPlayer.level) {
