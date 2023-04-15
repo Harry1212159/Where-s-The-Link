@@ -1,8 +1,8 @@
 #include "console.cpp"
 
 void SetUpWindow() {
-    SetConsoleTitle(TEXT("Hello world"));
-    SetWindowSize(910, 535);
+    SetConsoleTitle(TEXT("Where's The Link"));
+    SetWindowSize(150, 30);
     DisableResizeWindow();
     DisableCtrButton(0, 0, 1);
     DisableScrollbar();

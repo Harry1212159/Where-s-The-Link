@@ -1,18 +1,18 @@
 void SetWindowSize(SHORT width, SHORT height) {
-    // HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
+    HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    // SMALL_RECT WindowSize;
-    // WindowSize.Top = 0;
-    // WindowSize.Left = 0;
-    // WindowSize.Right = width;
-    // WindowSize.Bottom = height;
+    SMALL_RECT WindowSize;
+    WindowSize.Top = 0;
+    WindowSize.Left = 0;
+    WindowSize.Right = width;
+    WindowSize.Bottom = height;
 
-    // SetConsoleWindowInfo(hStdout, 1, &WindowSize);
+    SetConsoleWindowInfo(hStdout, 1, &WindowSize);
 
-    HWND console = GetConsoleWindow();
-    RECT r;
-    GetWindowRect(console, &r);
-    MoveWindow(console, 50, 50, width, height, TRUE);
+    // HWND console = GetConsoleWindow();
+    // RECT r;
+    // GetWindowRect(console, &r);
+    // MoveWindow(console, 50, 50, width, height, TRUE);
 }
 
 void SetScreenBufferSize(SHORT width, SHORT height) {
